@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/etSearchBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="Найти город"
+        app:layout_constraintEnd_toStartOf="@+id/rightEdgeMain"
+        app:layout_constraintStart_toStartOf="@+id/leftEdgeMain"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="20dp"/>
+
+    <ImageView
+        android:id="@+id/ivArticleItem1"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toStartOf="@+id/rightEdgeMain"
+        app:layout_constraintStart_toStartOf="@+id/leftEdgeMain"
+        app:layout_constraintTop_toBottomOf="@+id/etSearchBar"
+        app:srcCompat="@drawable/red_square_background"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:id="@+id/tvArticleItemTitle1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Центр Москвы"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tvArticleItemPublisher1"
+        app:layout_constraintStart_toStartOf="@+id/tvArticleItemPublisher1" />
+
+    <TextView
+        android:id="@+id/tvArticleItemPublisher1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Елена Никодимова"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/ivArticleItem1"
+        app:layout_constraintStart_toStartOf="@+id/leftEdgeMain"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="20dp"/>
+
+    <ImageView
+        android:id="@+id/ivArticleItem2"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toStartOf="@+id/rightEdgeMain"
+        app:layout_constraintStart_toStartOf="@+id/leftEdgeMain"
+        app:layout_constraintTop_toBottomOf="@+id/ivArticleItem1"
+        app:srcCompat="@drawable/paris_background"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:id="@+id/tvArticleItemTitle2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Красоты Парижа"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tvArticleItemPublisher2"
+        app:layout_constraintStart_toStartOf="@+id/tvArticleItemPublisher2" />
+
+    <TextView
+        android:id="@+id/tvArticleItemPublisher2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Сергев Артушин"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/ivArticleItem2"
+        app:layout_constraintStart_toStartOf="@+id/leftEdgeMain"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="20dp"/>
+
+    <ImageView
+        android:id="@+id/ivArticleItem3"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toStartOf="@+id/rightEdgeMain"
+        app:layout_constraintStart_toStartOf="@+id/leftEdgeMain"
+        app:layout_constraintTop_toBottomOf="@+id/ivArticleItem2"
+        app:srcCompat="@drawable/rome_background"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:id="@+id/tvArticleItemTitle3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ночной Рим"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tvArticleItemPublisher3"
+        app:layout_constraintStart_toStartOf="@+id/tvArticleItemPublisher3" />
+
+    <TextView
+        android:id="@+id/tvArticleItemPublisher3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Олег Непомнящий"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/ivArticleItem3"
+        app:layout_constraintStart_toStartOf="@+id/leftEdgeMain"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="20dp"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/leftEdgeMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/rightEdgeMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="20dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/ivPhotoScroll"
+        android:layout_width="408dp"
+        android:layout_height="194dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/red_square_background"
+        android:contentDescription="Images of the post" />
+
+    <Button
+        android:id="@+id/btnGoToMainPage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/btn_go_back_to_main_page"
+        app:layout_constraintStart_toStartOf="@+id/rightEdge"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvCurrentPhotoIndicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingVertical="3dp"
+        android:paddingHorizontal="5dp"
+        android:text="@string/tv_current_photo_indicator"
+        android:background="@drawable/rounded_rectangle_background"
+        app:layout_constraintBottom_toBottomOf="@+id/ivPhotoScroll"
+        app:layout_constraintEnd_toEndOf="@id/leftEdge"
+        android:layout_marginBottom="20dp"/>
+
+    <TextView
+        android:id="@+id/tvArticleTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_article_title"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="@+id/rightEdge"
+        app:layout_constraintTop_toBottomOf="@+id/ivPhotoScroll"
+        android:layout_marginTop="20dp"/>
+
+
+    <TextView
+        android:id="@+id/tvPublisherName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_publisher_name"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/ivFireReaction"
+        app:layout_constraintStart_toStartOf="@+id/rightEdge"
+        app:layout_constraintTop_toTopOf="@+id/ivFireReaction" />
+
+    <ImageView
+        android:id="@+id/ivFireReaction"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:layout_constraintStart_toEndOf="@+id/tvPublisherName"
+        app:layout_constraintTop_toBottomOf="@+id/tvArticleTitle"
+        tools:srcCompat="@drawable/fire_reaction_emoji"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"/>
+
+    <ImageView
+        android:id="@+id/ivLikeReaction"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ivFireReaction"
+        app:layout_constraintStart_toEndOf="@+id/ivFireReaction"
+        app:layout_constraintTop_toTopOf="@+id/ivFireReaction"
+        tools:srcCompat="@drawable/like_reaction_emoji"
+        android:layout_marginStart="10dp"/>
+
+    <TextView
+        android:id="@+id/tvArticleContents"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_article_contents"
+        app:layout_constraintStart_toStartOf="@id/rightEdge"
+        app:layout_constraintEnd_toEndOf="@id/leftEdge"
+        app:layout_constraintTop_toBottomOf="@+id/ivFireReaction"
+        android:layout_marginTop="20dp"/>
+
+    <Button
+        android:id="@+id/btnComments"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_comments"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/leftEdge"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/rightEdge"
+        android:layout_marginBottom="20dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/rightEdge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/leftEdge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="20dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
